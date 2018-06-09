@@ -18,6 +18,7 @@
             <th scope="col">#</th>
             <th scope="col">Başlık</th>
             <th scope="col">Tarih</th>
+            <th scope="col">Resim</th>
             <th scope="col">Kategori</th>            
             <th scope="col-2">İşlemler</th>
             </tr>
@@ -28,6 +29,7 @@
             <th scope="row">{{ loop.index }}</th>
             <td>{{ blog.title }}</td>
             <td>{{ blog.createdat|date("d.m.Y") }}</td>
+            <td><img src="{{ asset('uploads/' ~ blog.getImage) }}" alt="{{ asset('uploads/deneme.css') }}"></td>
             <td>{{ blog.category.categoryName }}</td>
             <td>
                 <a href="/admin/blog/edit/{{blog.id}}" class="btn btn-info">Düzenle</a>
