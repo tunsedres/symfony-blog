@@ -1,0 +1,5 @@
+<select name="category" id="category">
+    {% for category in categories %}
+        <option value="{{category.id}}">{{ category.category_name }}</option>
+    {% endfor %}
+</select>

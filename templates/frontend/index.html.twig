@@ -1,0 +1,28 @@
+{% extends 'layouts/frontend_layout.html.twig' %}
+
+{% block title %} Blog Anasayfa {% endblock %}
+
+{% block body %}
+
+<div class="index-content">
+    <div class="container">
+        <div class="row">
+            {% for blog in blogs %}
+            <a href="blog-ici.html">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="http://cevirdikce.com/proje/hasem-2/images/finance-1.jpg">
+                        <h4>{{ blog.title }}</h4>
+                        {{ blog.content|slice(0, 250) | raw }}
+                        <a href="blog-ici.html" class="blue-button">Read More</a>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

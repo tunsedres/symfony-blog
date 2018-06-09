@@ -1,0 +1,15 @@
+home:
+    path: /
+    controller: App\Controller\Theme\HomeController::Home
+
+
+
+
+#admin bölümü
+admin_login:
+    path: /admin/login
+    controller: App\Controller\Admin\DashboardController::Dashboard
+
+admin_blog:
+    path: /admin/blog
+    controller: App\Controller\Admin\BlogController::index

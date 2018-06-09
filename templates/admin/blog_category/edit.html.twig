@@ -1,0 +1,20 @@
+{% extends "layouts/admin_layout.html.twig" %}
+
+{% block title %} Blog Ekle {% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="row" style="margin: 50px 0 50px 0">
+        <div class="col-md-6 col-md-offset-2">
+            {{ form_start(blogCategoryForm) }}
+            {{ form_errors(blogCategoryForm) }}
+            {{ form_widget(blogCategoryForm) }}
+            {{ form_end(blogCategoryForm) }}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
